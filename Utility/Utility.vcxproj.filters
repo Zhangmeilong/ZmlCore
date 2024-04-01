@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Code">
+      <UniqueIdentifier>{d12b003a-2888-497a-bd82-38f2bf3ab9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility">
+      <UniqueIdentifier>{9f1ae7b1-8472-49c8-a35d-83388a275ac9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Guid">
+      <UniqueIdentifier>{3d80c4a6-e9d4-49f5-93ad-f2db2f424ae5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Tool">
+      <UniqueIdentifier>{ad543156-a755-4e4d-85fa-b5d8e259c44d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Date">
+      <UniqueIdentifier>{5204a0e7-6010-4c46-908a-bec004b530b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Logger">
+      <UniqueIdentifier>{d593713d-54a4-4649-8f30-169c5c60f078}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Device">
+      <UniqueIdentifier>{02805ba0-31ee-47b4-928c-ad4e0a1143e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code\Utility\Xml">
+      <UniqueIdentifier>{35c5e4f5-8eb8-4d84-a134-8bddfb4bcd74}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Utility\Date\Date.h">
+      <Filter>Code\Utility\Date</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\Device\Device.h">
+      <Filter>Code\Utility\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\Guid\Guid.h">
+      <Filter>Code\Utility\Guid</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\Logger\Logger.h">
+      <Filter>Code\Utility\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\Tool\Tool.h">
+      <Filter>Code\Utility\Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\UtilityHeader.h">
+      <Filter>Code\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Utility\Xml\Xml.h">
+      <Filter>Code\Utility\Xml</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\Utility\Date\Date.cpp">
+      <Filter>Code\Utility\Date</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Utility\Device\Device.cpp">
+      <Filter>Code\Utility\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Utility\Guid\Guid.cpp">
+      <Filter>Code\Utility\Guid</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Utility\Logger\Logger.cpp">
+      <Filter>Code\Utility\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Utility\Tool\Tool.cpp">
+      <Filter>Code\Utility\Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="Code\Utility\Xml\Xml.cpp">
+      <Filter>Code\Utility\Xml</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
