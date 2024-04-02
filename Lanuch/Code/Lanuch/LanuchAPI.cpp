@@ -4,15 +4,11 @@
 
 using namespace zml;
 
+LanuchAPI* LanuchAPI::sm_pLanuchAPI = nullptr;
 SystemAPI* APIProvider::sm_pSystemAPI = nullptr;
 
 LanuchAPI::LanuchAPI():
 	pAPIProvider(nullptr)
-{
-
-}
-
-void LanuchAPI::iKeyEvent(const uint8_t& nKeyCode, const bool& bDown)
 {
 
 }
@@ -52,5 +48,3 @@ void LanuchAPI::Destroy()
 		pLogger->Info("Destroy LanuchAPI.");
 	}
 }
-
-LanuchAPI* LanuchAPI::sm_pLanuchAPI = nullptr;
