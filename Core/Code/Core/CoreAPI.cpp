@@ -14,18 +14,17 @@ CoreAPI::CoreAPI() :
 
 void CoreAPI::iKeyEvent(const int& nKeyCode, const bool& bDown)
 {
-	std::string strMessage = "nKeyCode: " + std::to_string(nKeyCode);
-	strMessage += bDown ? ", true" : ", false";
-	Logger* pLogger = Logger::GetInstance();
-	if (pLogger)
+	if (nKeyCode == 'C')
 	{
-		pLogger->Debug(strMessage);
+		std::string strAppPath = Tool::GetApplicationPath() + "/ZmlCore.conf";
+		Xml::CreateDefaultConf(strAppPath);
 	}
 }
 
 void CoreAPI::Initialize(SystemAPI* pSystemAPI)
 {
-	pSystemAPI->iCore = this;
+	pSystemAPI->iCoreAPI = this;
+	pSystemAPI->iLanuchAPI->iAddFrameUpdateModule(this);
 }
 
 void CoreAPI::Destroy()
@@ -40,4 +39,9 @@ CoreAPI* CoreAPI::GetInstance()
 		sm_pCoreAPI = new CoreAPI();
 	}
 	return sm_pCoreAPI;
+}
+
+void CoreAPI::iFrameUpdate()
+{
+	DEBUG("CoreAPI iFrameUpdate.");
 }

@@ -7,6 +7,7 @@ namespace zml
 	public:
 		explicit				CoreAPI();
 		virtual void			iKeyEvent(const int& nKeyCode, const bool& bDown) override;
+		virtual void			iFrameUpdate() override;
 		void					Initialize(SystemAPI* pSystemAPI);
 		void					Destroy();
 		static CoreAPI*			GetInstance();

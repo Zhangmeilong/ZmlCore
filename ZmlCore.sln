@@ -4,10 +4,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lanuch", "Lanuch\Lanuch.vcxproj", "{662D70F5-F4FD-4F32-BEA8-EEDD4BFE9C3A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D5309F9-6A79-4F64-8B0C-69BFF36B3081} = {5D5309F9-6A79-4F64-8B0C-69BFF36B3081}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{5D5309F9-6A79-4F64-8B0C-69BFF36B3081}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj", "{8A507F79-B69C-408F-81A6-8D622C500A9D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5D5309F9-6A79-4F64-8B0C-69BFF36B3081} = {5D5309F9-6A79-4F64-8B0C-69BFF36B3081}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -5,6 +5,7 @@ namespace zml
 {
 	class ZML_API Tool
 	{
+	public:
 		Tool() = delete;
 		//用于去掉字符串中所有的空格
 		static std::string					TrimString(const std::string& str);

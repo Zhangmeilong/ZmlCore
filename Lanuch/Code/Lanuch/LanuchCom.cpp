@@ -36,7 +36,7 @@ ZML_API zml::SystemAPI* InitializeLanuchAPI(const std::string& strConfigFile)
 ZML_API int UninitializeLanuchAPI()
 {
 	zml::APIProvider::GetSystemAPI()->iLanuchAPI = nullptr;
-	zml::APIProvider::GetSystemAPI()->iCore = nullptr;
+	zml::APIProvider::GetSystemAPI()->iCoreAPI = nullptr;
 
 	zml::LanuchAPI* pLanuchAPI = zml::LanuchAPI::GetInstance();
 	if (pLanuchAPI)

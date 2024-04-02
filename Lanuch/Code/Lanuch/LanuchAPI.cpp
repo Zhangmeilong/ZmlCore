@@ -48,3 +48,19 @@ void LanuchAPI::Destroy()
 		pLogger->Info("Destroy LanuchAPI.");
 	}
 }
+
+void LanuchAPI::iAddFrameUpdateModule(IFrameUpdateModule* pIFrameUpdateModule)
+{
+	if (pIFrameUpdateModule) 
+	{
+		m_vecIFrameUpdateModules.push_back(pIFrameUpdateModule);
+	}
+}
+
+void LanuchAPI::iRunFrame()
+{
+	for (auto it : m_vecIFrameUpdateModules) 
+	{
+		it->iFrameUpdate();
+	}
+}

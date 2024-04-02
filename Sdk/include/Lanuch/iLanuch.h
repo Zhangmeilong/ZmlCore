@@ -8,22 +8,22 @@
 
 namespace zml 
 {
-	class ILanuch;
-	class ICore;
+	class ILanuchAPI;
+	class ICoreAPI;
 	typedef struct __SystemAPI
 	{
-		ILanuch* iLanuchAPI;
-		ICore* iCore;
+		ILanuchAPI* iLanuchAPI;
+		ICoreAPI* iCoreAPI;
 		__SystemAPI() 
 		{
 			iLanuchAPI = nullptr;
-			iCore = nullptr;
+			iCoreAPI = nullptr;
 		}
 
 		~__SystemAPI() 
 		{
 			iLanuchAPI = nullptr;
-			iCore = nullptr;
+			iCoreAPI = nullptr;
 		}
 	}SystemAPI;
 
@@ -56,9 +56,23 @@ namespace zml
 		ZML_PTR nParam4;
 	};
 
-	class ILanuch 
+	class IProcessModule
 	{
 	public:
-		virtual void iKeyEvent(const uint8_t& nKeyCode, const bool& bDown) = 0;
+		virtual void iKeyEvent(const int& nKeyCode, const bool& bDown) = 0;
 	};
+
+	class IFrameUpdateModule
+	{
+	public:
+		virtual void iFrameUpdate() = 0;
+	};
+
+	class ILanuchAPI 
+	{
+	public:
+		virtual void iAddFrameUpdateModule(IFrameUpdateModule* pIFrameUpdateModule) = 0;
+		virtual void iRunFrame() = 0;
+	};
+
 }

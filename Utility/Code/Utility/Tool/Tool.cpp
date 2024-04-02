@@ -193,6 +193,7 @@ std::string Tool::GetApplicationPath()
 	std::string strExePath(exePath);
 	std::string strResult;
 	ReplaceAll(strExePath, "\\", "/", strResult);
+	strResult = strResult.substr(0, strResult.find_last_of("/"));
 	return strResult;
 }
 
