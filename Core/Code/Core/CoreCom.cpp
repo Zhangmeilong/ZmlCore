@@ -1,22 +1,20 @@
 #include "CoreCom.h"
 
-ZML_API zml::SystemAPI* InitializeCore(zml::SystemAPI* pSystemAPI)
+ZML_API zml::ICoreAPI* InitializeCoreAPI(zml::SystemAPI* pSystemAPI)
 {
 	zml::CoreAPI* pCoreAPI = zml::CoreAPI::GetInstance();
 	if (pCoreAPI) 
 	{
 		pCoreAPI->Initialize(pSystemAPI);
 	}
-	return pSystemAPI;
+	return pCoreAPI;
 }
 
-ZML_API int UninitializeCore()
+ZML_API void UninitializeCoreAPI()
 {
 	zml::CoreAPI* pCoreAPI = zml::CoreAPI::GetInstance();
 	if (pCoreAPI)
 	{
 		pCoreAPI->Destroy();
-		return 0;
 	}
-	return -1;
 }

@@ -2,7 +2,7 @@
 namespace zml
 {
 	class ZML_API CoreAPI :
-		public ICore
+		public ICoreAPI
 	{
 	public:
 		explicit				CoreAPI();

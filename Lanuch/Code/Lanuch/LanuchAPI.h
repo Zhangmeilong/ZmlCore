@@ -2,7 +2,7 @@
 namespace zml 
 {
 	class LanuchAPI:
-		public ILanuch
+		public ILanuchAPI
 	{
 	public:
 		explicit				LanuchAPI();
