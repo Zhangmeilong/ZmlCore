@@ -6,7 +6,7 @@ namespace zml
 	{
 	public:
 		explicit				CoreAPI();
-		virtual void			iKeyEvent(const uint8_t& nKeyCode, const bool& bDown) override;
+		virtual void			iKeyEvent(const int& nKeyCode, const bool& bDown) override;
 		void					Initialize(SystemAPI* pSystemAPI);
 		void					Destroy();
 		static CoreAPI*			GetInstance();

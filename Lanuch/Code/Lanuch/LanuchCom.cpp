@@ -26,6 +26,8 @@ ZML_API zml::SystemAPI* InitializeLanuchAPI(const std::string& strConfigFile)
 	{
 		return nullptr;
 	}
+
+	//::FreeLibrary(core);
 #endif
 
 	return zml::APIProvider::GetSystemAPI();
@@ -33,15 +35,17 @@ ZML_API zml::SystemAPI* InitializeLanuchAPI(const std::string& strConfigFile)
 
 ZML_API int UninitializeLanuchAPI()
 {
+	zml::APIProvider::GetSystemAPI()->iLanuchAPI = nullptr;
+	zml::APIProvider::GetSystemAPI()->iCore = nullptr;
+
 	zml::LanuchAPI* pLanuchAPI = zml::LanuchAPI::GetInstance();
 	if (pLanuchAPI)
 	{
 		pLanuchAPI->Destroy();
-		return 0;
 	}
 	if (coreUninit) 
 	{
 		coreUninit();
 	}
-	return -1;
+	return 0;
 }

@@ -10,12 +10,17 @@ SystemAPI* APIProvider::sm_pSystemAPI = nullptr;
 CoreAPI::CoreAPI() :
 	m_pAPIProvider(nullptr)
 {
-
 }
 
-void CoreAPI::iKeyEvent(const uint8_t& nKeyCode, const bool& bDown)
+void CoreAPI::iKeyEvent(const int& nKeyCode, const bool& bDown)
 {
-
+	std::string strMessage = "nKeyCode: " + std::to_string(nKeyCode);
+	strMessage += bDown ? ", true" : ", false";
+	Logger* pLogger = Logger::GetInstance();
+	if (pLogger)
+	{
+		pLogger->Debug(strMessage);
+	}
 }
 
 void CoreAPI::Initialize(SystemAPI* pSystemAPI)
@@ -26,12 +31,11 @@ void CoreAPI::Initialize(SystemAPI* pSystemAPI)
 void CoreAPI::Destroy()
 {
 	DEL_PTR(sm_pCoreAPI);
-	APIProvider::GetSystemAPI()->iCore = nullptr;
 }
 
 CoreAPI* CoreAPI::GetInstance()
 {
-	if (sm_pCoreAPI == nullptr) 
+	if (sm_pCoreAPI == nullptr)
 	{
 		sm_pCoreAPI = new CoreAPI();
 	}
